@@ -20,12 +20,12 @@ validation = ImageDataGenerator(rescale = 1/255)
 
 """**`Importing Data`**"""
 
-train_dataset = train.flow_from_directory('/content/drive/MyDrive/ZapLearnM3AI-20220112T110838Z-001/ZapLearnM3AI/Training Data',
+train_dataset = train.flow_from_directory('Use your own google drive link for training images',
                                           target_size = (200,200),
                                           batch_size = 3,
                                           class_mode = 'binary')
 
-validation_dataset = validation.flow_from_directory('/content/drive/MyDrive/ZapLearnM3AI-20220112T110838Z-001/ZapLearnM3AI/Validation Data',
+validation_dataset = validation.flow_from_directory('Use your own google drive link for validating images',
                                                     target_size = (200,200),
                                                     batch_size = 3,
                                                     class_mode = 'binary')
@@ -72,7 +72,7 @@ model_fit = model.fit(train_dataset,
 
 """**`Testing Results`**"""
 
-dir_path = '/content/drive/MyDrive/ZapLearnM3AI-20220112T110838Z-001/ZapLearnM3AI/Testing Data/Metal'
+dir_path = 'Use your own google drive link for metal waste images'
 
 for i in os.listdir(dir_path):
   img = image.load_img(dir_path + '//' + i, target_size = (200,200))
@@ -91,7 +91,7 @@ for i in os.listdir(dir_path):
 
 """**`Random Testing`**"""
 
-img_path = '/content/drive/MyDrive/ZapLearnM3AI-20220112T110838Z-001/ZapLearnM3AI/BisleriWaterBottle.jpg'
+img_path = 'Use your own google drive link for random images'
 
 img = image.load_img(img_path, target_size = (200,200))
 plt.imshow(img)
